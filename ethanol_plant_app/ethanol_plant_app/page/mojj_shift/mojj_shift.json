@@ -1,0 +1,11 @@
+{
+  "name": "mojj_shift",
+  "page_name": "mojj_shift",
+  "title": "Mojj Shift",
+  "module": "Ethanol Plant App",
+  "standard": "Yes",
+  "roles": [],
+  "restrict_to_domain": "",
+  "icon": "fa fa-industry",
+  "system_page": 0
+}

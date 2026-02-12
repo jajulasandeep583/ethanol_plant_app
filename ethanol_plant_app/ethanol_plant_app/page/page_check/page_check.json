@@ -1,0 +1,11 @@
+{
+  "name": "page_check",
+  "page_name": "page_check",
+  "title": "Page Check",
+  "module": "Ethanol Plant App",
+  "standard": "Yes",
+  "roles": [],
+  "restrict_to_domain": "",
+  "icon": "fa fa-industry",
+  "system_page": 0
+}

@@ -1,0 +1,236 @@
+/* Ethanol Plant App - Global Styles */
+
+:root {
+    --ethanol-primary: #1a5f7a;
+    --ethanol-secondary: #57837b;
+    --ethanol-accent: #c38e70;
+    --ethanol-background: #f8f9fa;
+    --ethanol-card-bg: #ffffff;
+    --ethanol-text: #212529;
+    --ethanol-text-muted: #6c757d;
+    --ethanol-border: #dee2e6;
+    --ethanol-success: #28a745;
+    --ethanol-warning: #ffc107;
+    --ethanol-danger: #dc3545;
+}
+
+/* Dark mode support */
+[data-theme="dark"] {
+    --ethanol-background: #1a1a2e;
+    --ethanol-card-bg: #16213e;
+    --ethanol-text: #eee;
+    --ethanol-text-muted: #aaa;
+    --ethanol-border: #2a2a4a;
+}
+
+/* SCADA Dashboard Layout */
+.ethanol-page-container {
+    padding: 20px;
+    background: var(--ethanol-background);
+    min-height: calc(100vh - 60px);
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--ethanol-primary);
+}
+
+.page-header h2 {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--ethanol-primary);
+}
+
+.page-toolbar {
+    display: flex;
+    gap: 10px;
+}
+
+/* SCADA Dashboard Grid */
+.scada-dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+/* Panel Styles */
+.status-panel,
+.metrics-panel,
+.controls-panel {
+    background: var(--ethanol-card-bg);
+    border: 1px solid var(--ethanol-border);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: box-shadow 0.2s ease;
+}
+
+.status-panel:hover,
+.metrics-panel:hover,
+.controls-panel:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.status-panel h4,
+.metrics-panel h4,
+.controls-panel h4 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--ethanol-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Status Indicator */
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: rgba(40, 167, 69, 0.1);
+    border-radius: 8px;
+}
+
+.status-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--ethanol-success);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.status-indicator.inactive {
+    background: rgba(220, 53, 69, 0.1);
+}
+
+.status-indicator.inactive .status-dot {
+    background: var(--ethanol-danger);
+}
+
+.status-indicator.warning {
+    background: rgba(255, 193, 7, 0.1);
+}
+
+.status-indicator.warning .status-dot {
+    background: var(--ethanol-warning);
+}
+
+.status-text {
+    font-weight: 500;
+    color: var(--ethanol-text);
+}
+
+/* Metrics Grid */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 16px;
+}
+
+.metric-card {
+    background: var(--ethanol-background);
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid var(--ethanol-border);
+}
+
+.metric-label {
+    font-size: 0.7rem;
+    color: var(--ethanol-text-muted);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.metric-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--ethanol-primary);
+}
+
+.metric-unit {
+    font-size: 0.75rem;
+    color: var(--ethanol-text-muted);
+    margin-left: 4px;
+}
+
+/* Controls */
+.controls-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.control-btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: 1px solid var(--ethanol-border);
+    background: var(--ethanol-card-bg);
+    color: var(--ethanol-text);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.control-btn:hover {
+    background: var(--ethanol-primary);
+    color: white;
+    border-color: var(--ethanol-primary);
+}
+
+.control-btn.active {
+    background: var(--ethanol-primary);
+    color: white;
+    border-color: var(--ethanol-primary);
+}
+
+/* Loading State */
+.loading-indicator {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--ethanol-text-muted);
+}
+
+.loading-indicator i {
+    font-size: 3rem;
+    margin-bottom: 16px;
+    color: var(--ethanol-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .ethanol-page-container {
+        padding: 15px;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .scada-dashboard {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Plant Area Specific Colors */
+.ethanol-page.fermentation_withoutlab .page-header h2 { color: #2e7d32; }
+.ethanol-page.d_distillation .page-header h2 { color: #1565c0; }
+.ethanol-page.d_evaporation .page-header h2 { color: #6a1b9a; }
+.ethanol-page.recovery .page-header h2 { color: #ef6c00; }
+.ethanol-page.dryer .page-header h2 { color: #c62828; }
+.ethanol-page.quality .page-header h2 { color: #00838f; }

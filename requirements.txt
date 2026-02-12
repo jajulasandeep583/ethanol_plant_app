@@ -1,0 +1,3 @@
+# Frappe Framework is the primary dependency
+# It will be installed automatically by bench
+frappe

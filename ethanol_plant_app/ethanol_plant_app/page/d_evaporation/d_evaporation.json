@@ -1,0 +1,11 @@
+{
+  "name": "d_evaporation",
+  "page_name": "d_evaporation",
+  "title": "D Evaporation",
+  "module": "Ethanol Plant App",
+  "standard": "Yes",
+  "roles": [],
+  "restrict_to_domain": "",
+  "icon": "fa fa-industry",
+  "system_page": 0
+}

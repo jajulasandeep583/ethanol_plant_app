@@ -1,0 +1,11 @@
+{
+  "name": "fermentation_withoutlab",
+  "page_name": "fermentation_withoutlab",
+  "title": "Fermentation Without Lab",
+  "module": "Ethanol Plant App",
+  "standard": "Yes",
+  "roles": [],
+  "restrict_to_domain": "",
+  "icon": "fa fa-industry",
+  "system_page": 0
+}

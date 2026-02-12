@@ -1,0 +1,11 @@
+{
+  "name": "sand",
+  "page_name": "sand",
+  "title": "Sand",
+  "module": "Ethanol Plant App",
+  "standard": "Yes",
+  "roles": [],
+  "restrict_to_domain": "",
+  "icon": "fa fa-industry",
+  "system_page": 0
+}

@@ -1,0 +1,11 @@
+{
+  "name": "d_msdh",
+  "page_name": "d_msdh",
+  "title": "D MSDH",
+  "module": "Ethanol Plant App",
+  "standard": "Yes",
+  "roles": [],
+  "restrict_to_domain": "",
+  "icon": "fa fa-industry",
+  "system_page": 0
+}

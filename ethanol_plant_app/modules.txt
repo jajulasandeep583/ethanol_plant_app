@@ -1,0 +1,10 @@
+{
+    "creation": "2024-01-01 00:00:00.000000",
+    "doctype": "Module Def",
+    "docstatus": 0,
+    "idx": 0,
+    "module_name": "Ethanol Plant App",
+    "name": "Ethanol Plant App",
+    "custom": 0,
+    "app_name": "ethanol_plant_app"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "my_shifts",
+  "page_name": "my_shifts",
+  "title": "My Shifts",
+  "module": "Ethanol Plant App",
+  "standard": "Yes",
+  "roles": [],
+  "restrict_to_domain": "",
+  "icon": "fa fa-industry",
+  "system_page": 0
+}
